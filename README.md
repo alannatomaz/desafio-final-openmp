@@ -41,14 +41,13 @@ g++ -O2 -fopenmp -Wall -o coeficiente_variacao src/coeficiente_variacao.cpp
 ## Sobre a base de dados
 
 A base é gerada por `data/gerar_dados.cpp` com uma seed fixa (`20251111`), então é
-sempre reprodutível, mas é "sua" — pode trocar a seed ou os parâmetros das
-distribuições se quiser uma base diferente. Altura segue uma distribuição normal
+sempre reprodutível, mas é possível trocar também. Altura segue uma distribuição normal
 (média 170 cm, desvio 9 cm); peso é derivado de um IMC aleatório aplicado à altura
-de cada pessoa, mais ruído individual.
+de cada pessoa, mais um ruído individual.
 
 ## Sobre a paralelização
 
-Veja os comentários em `src/coeficiente_variacao.cpp`. Resumo:
+Existem comentários em `src/coeficiente_variacao.cpp`. Mas, resumindo:
 
 - **min/max**: `reduction(min:) reduction(max:)` — cada thread reduz seu próprio
   min/max parcial, sem precisar de seção crítica.
@@ -62,4 +61,4 @@ Veja os comentários em `src/coeficiente_variacao.cpp`. Resumo:
 
 Com N=1000 (o tamanho exigido pelo exercício), a versão paralela é **mais lenta**
 que a sequencial — o overhead de criar/sincronizar threads domina um trabalho tão
-pequeno. Essa é justamente a discussão feita na análise de desempenho do relatório.
+pequeno. 
