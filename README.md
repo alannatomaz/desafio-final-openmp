@@ -10,14 +10,14 @@ são comparados.
 ## Estrutura
 
 ```
-desafio_openmp/
 ├── data/
 │   ├── gerar_dados.cpp   # gera a base de dados do aluno (1000 pessoas)
 │   └── dataset.txt       # base gerada (criada ao rodar o gerador)
 ├── src/
 │   └── coeficiente_variacao.cpp   # programa principal
 ├── Makefile
-└── README.md
+├── README.md
+└── relatorio.pdf
 ```
 
 ## Como rodar
