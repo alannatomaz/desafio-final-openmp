@@ -62,6 +62,4 @@ Veja os comentários em `src/coeficiente_variacao.cpp`. Resumo:
 
 Com N=1000 (o tamanho exigido pelo exercício), a versão paralela é **mais lenta**
 que a sequencial — o overhead de criar/sincronizar threads domina um trabalho tão
-pequeno. O programa inclui uma demonstração extra com dados sintéticos maiores
-que mostra a partir de que tamanho de N o paralelismo passa a compensar. Essa é
-justamente a discussão pedida na análise de desempenho do relatório.
+pequeno. Essa é justamente a discussão feita na análise de desempenho do relatório.
